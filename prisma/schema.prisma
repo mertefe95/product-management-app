@@ -56,7 +56,7 @@ model ProductOptionValue {
   variant   ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
   variantId Int
 
-   @@unique([value,optionId, variantId], name: "value_optionId_variantId") // <-- this is the unique constraint
+   
 }
 
 model ProductVariant {
