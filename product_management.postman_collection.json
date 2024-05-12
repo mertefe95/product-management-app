@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "40a779d2-6f9d-469a-8d86-8c7a0228677c",
+		"name": "Product Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13402651"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products List (paginated)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/list?pageNumber=1&paginationPerPage=1&search=Mert",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"list"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "paginationPerPage",
+							"value": "1"
+						},
+						{
+							"key": "search",
+							"value": "Mert"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Options",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@medusa-test.com\",\n    \"password\": \"supersecret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:id/option",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"option"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Option Values",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@medusa-test.com\",\n    \"password\": \"supersecret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:optionId/option/:variantId/value",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":optionId",
+						"option",
+						":variantId",
+						"value"
+					],
+					"variable": [
+						{
+							"key": "optionId",
+							"value": "2"
+						},
+						{
+							"key": "variantId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Variants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@medusa-test.com\",\n    \"password\": \"supersecret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:id/variant",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"variant"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Mert\",\n    \"subtitle\": \"\",\n    \"description\": \"\",\n    \"handle\": \"\",\n    \"isGiftcard\": false,\n    \"status\": \"PROPOSED\",\n    \"thumbnail\": \"\",\n    \"externalId\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product Option",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Brand\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:id/option",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"option"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product Option Value",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": \"M\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:optionId/option/:variantId/value",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":optionId",
+						"option",
+						":variantId",
+						"value"
+					],
+					"variable": [
+						{
+							"key": "optionId",
+							"value": "3"
+						},
+						{
+							"key": "variantId",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product Variant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Nike\",\n    \"sku\": \"\",\n    \"barcode\": \"\",\n    \"ean\": \"\",\n    \"upc\": \"\",\n    \"originCountry\": \"\",\n    \"material\": \"\",\n    \"midCode\": \"\",\n    \"allowBackorder\": false,\n    \"weight\": 1,\n    \"length\": 2,\n    \"width\": 3,\n    \"hsCode\": \"\",\n    \"inventoryQuantity\": 100,\n    \"manageInventory\": true,\n    \"price\": 44\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:id/variant",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"variant"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"\",\n    \"subtitle\": \"\",\n    \"description\": \"\",\n    \"handle\": \"\",\n    \"isGiftcard\": \"\",\n    \"productStatus\": \"\",\n    \"thumbnail\": \"\",\n    \"externalId\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Product Option",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Brand\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:id/option",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"option"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Product Option Value",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": \"M\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:optionId/option/:variantId/value",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":optionId",
+						"option",
+						":variantId",
+						"value"
+					],
+					"variable": [
+						{
+							"key": "optionId",
+							"value": "3"
+						},
+						{
+							"key": "variantId",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Product Variant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Nixe\",\n    \"sku\": \"\",\n    \"barcode\": \"\",\n    \"ean\": \"\",\n    \"upc\": \"\",\n    \"originCountry\": \"\",\n    \"material\": \"\",\n    \"midCode\": \"\",\n    \"allowBackorder\": false,\n    \"weight\": 1,\n    \"length\": 2,\n    \"width\": 3,\n    \"hsCode\": \"\",\n    \"inventoryQuantity\": 100,\n    \"manageInventory\": true,\n    \"price\": 44\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/:id/variant",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"variant"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/product/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product Option",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/product/:id/option",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"option"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product Option Value",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/product/:optionId/option/:variantId/value",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":optionId",
+						"option",
+						":variantId",
+						"value"
+					],
+					"variable": [
+						{
+							"key": "optionId",
+							"value": "1"
+						},
+						{
+							"key": "variantId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product Variant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/product/:id/variant",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						":id",
+						"variant"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
